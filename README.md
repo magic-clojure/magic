@@ -11,7 +11,7 @@ The data structures, reader, and utility functions Clojure uses at runtime. This
 
 It is a C# codebase hosted at [nasser/Clojure.Runtime](https://github.com/nasser/Clojure.Runtime) and can be built with the `dotnet` command line tool.
 
-It is forked from [arcadia-unity/clojure-clr](https://github.com/arcadia-unity/clojure-clr) which was forked from the original [clojure/clojure-clr](https://github.com/clojure/clojure-clr). As a result Clojure.Runtime is largely the result of David Miller's hard work. MAGIC's Clojure.Runtime is a subset of ClojureCLR, removing the C# implementation of the ClojureCLR compiler and making other changes to better work with MAGIC, particularly around how namespaces and files are loaded.
+It is forked from [arcadia-unity/clojure-clr](https://github.com/arcadia-unity/clojure-clr) which was forked from the original [clojure/clojure-clr](https://github.com/clojure/clojure-clr). As a result Clojure.Runtime is largely the result of [David Miller](https://github.com/dmiller)'s hard work. MAGIC's Clojure.Runtime is a subset of ClojureCLR, removing the C# implementation of the ClojureCLR compiler and making other changes to better work with MAGIC, particularly around how namespaces and files are loaded.
 
 ### Magic.Runtime
 Additional data structures and utility functionality used by MAGIC. Its primary contribution is to provide the implementation of fast dynamic call sites.
