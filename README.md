@@ -35,7 +35,7 @@ It is a hybrid C# and Clojure codebase hosted at [nasser/nostrand](https://githu
 ### Magic.Unity
 An integration package to get MAGIC compiled Clojure code running in Unity games, including iOS builds.
 
-It is a C# codebase hosted at [nasser/Magic.Unity](https://github.com/nasser/Magic.Unity). It includes bytecode post-processing to work around Unity specific issues with MAGIC compiled code.
+It is a C# codebase hosted at [nasser/Magic.Unity](https://github.com/nasser/Magic.Unity) and can be built with the `dotnet` command line tool. It includes bytecode post-processing to work around Unity specific issues with MAGIC compiled code.
 
 ## Requirements
 
