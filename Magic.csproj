@@ -25,6 +25,13 @@
         <MagicRuntimeBinaries Include="magic/bootstrap/clojure*.clj.dll" Exclude="magic/bootstrap/clojure.tools.analyzer*.clj.dll" />
     </ItemGroup>
 
+    <Target Name="All">
+        <Exec Command="dotnet build -t:Clean" />
+        <Exec Command="dotnet build -t:Magic" />
+        <Exec Command="dotnet build -t:Bootstrap" />
+        <Exec Command="dotnet build -t:MagicUnity" />
+    </Target>
+
     <Target Name="ClojureRuntime" DependsOnTargets="CloneRepositories" Condition="!Exists('$(ClojureRuntimeDllNet40)') Or !Exists('$(ClojureRuntimeDllNetStandard)')">
         <Exec WorkingDirectory="clojure.runtime" Command="dotnet build -c Release" />
     </Target>
@@ -51,7 +58,7 @@
         <Copy SourceFiles="@(MagicAllBinaries)" DestinationFolder="$(NostrandReferences)" />
         <Exec WorkingDirectory="nostrand" Command="dotnet build -c Release" />
     </Target>
-
+    
     <Target Name="CloneRepositories">
         <Exec Command="git clone --depth 1 --branch $(ClojureRuntimeCloneString) clojure.runtime" Condition="!Exists('clojure.runtime')" />
         <Exec Command="git clone --depth 1 --branch $(MagicCloneString) magic" Condition="!Exists('magic')" />
